@@ -29,7 +29,7 @@ app.set('view engine', 'hbs');
 hbs.registerPartials(hbsPartialsDirPath);
 
 // setup routs to serve `hbs` templates---
-app.get('/', (req, res) => {
+app.get('', (req, res) => {
     res.render('index', {
         pageTitle: 'HomePage',
         title: 'This is HomePage',
