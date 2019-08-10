@@ -28,35 +28,42 @@ app.set('view engine', 'hbs');
 // Setting hbs to use the partials---
 hbs.registerPartials(hbsPartialsDirPath);
 
+const author = {
+    name: 'Ajay Rawat'
+}
+
 // setup routs to serve `hbs` templates---
 app.get('', (req, res) => {
     res.render('index', {
         pageTitle: 'HomePage',
-        title: 'This is HomePage',
-        name: 'Ajay Rawat'
+        title: 'Weather App!',
+        name: author.name,
+        active: { active_home: true },
     })
 })
 
 app.get('/about', (req, res) => {
     res.render('about', {
         pageTitle: 'About Page',
-        title: 'This is About page title',
-        name: 'Ajay Rawat'
+        title: 'About me!',
+        name: author.name,
+        active: { active_about: true },
     })
 })
 
 app.get('/help', (req, res) => {
     res.render('help', {
         pageTitle: 'Help Page',
-        title: 'This is Help page title',
-        name: 'Ajay Rawat'
+        title: 'Help!',
+        name: author.name,
+        active: { active_help: true },
     })
 })
 
 app.get('/help/*', (req, res) => {
     res.render('404', {
         title: '404, Help article not found!',
-        name: 'Ajay Rawat'
+        name: author.name
     })
 })
 
@@ -91,7 +98,7 @@ app.get('/weather', (req, res) => {
 app.get('*', (req, res) => {
     res.render('404', {
         title: '404, Page not found!',
-        name: 'Ajay Rawat'
+        name: author.name
     })
 })
 

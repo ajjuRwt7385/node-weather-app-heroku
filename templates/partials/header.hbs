@@ -1,8 +1,8 @@
 <h1>{{title}}</h1>
 <nav>
     <ul>
-        <li><a href="/">Weather</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/help">Help</a></li>
+        <li class="{{#if active.active_home}}active{{/if}}"><a href="/">Weather</a></li>
+        <li class="{{#if active.active_about}}active{{/if}}"><a href="/about">About</a></li>
+        <li class="{{#if active.active_help}}active{{/if}}"><a href="/help">Help</a></li>
     </ul>
 </nav>

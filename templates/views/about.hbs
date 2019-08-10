@@ -5,8 +5,11 @@
 </head>
 <body>
     <div class="main-content">
-        {{>header}}
+        {{>header}}   
+        <p>This site is created by {{name}}.</p>     
         <img class="portrait" src="/images/me.jpg" />
+        
+        <p><b>It uses:</b> <br/><i class="url">mapbox.com</i> api service for fetching the geocode from user input search location &amp; <i class="url">darksky.net</i> api service to fetch the weather data.</p>
     </div>
     {{>footer}}
 </body>
